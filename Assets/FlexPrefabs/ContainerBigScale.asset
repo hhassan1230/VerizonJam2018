@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f2b44126ff4eb34e941cfec7bfae3a0, type: 3}
-  m_Name: New FlexContainer 1
+  m_Name: ContainerBigScale
   m_EditorClassIdentifier: 
   m_simpleMode: 1
-  m_simpleMaxParticles: 10000
+  m_simpleMaxParticles: 100000
   m_simpleSubstepCount: 2
   m_simpleIterationCount: 5
   m_simpleGravity: {x: 0, y: 0, z: 0}
@@ -31,7 +31,7 @@ MonoBehaviour:
   m_simpleFluidAnisotropy: 2
   m_simpleFluidMinScale: 0.2
   m_simpleFluidMaxScale: 1
-  m_maxParticles: 10000
+  m_maxParticles: 100000
   m_maxDiffuse: 0
   m_maxNeighbors: 200
   m_maxContacts: 6
