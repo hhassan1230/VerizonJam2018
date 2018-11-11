@@ -4,6 +4,9 @@ using UnityEngine;
 using Exploder.Utils;
 
 public class CrystalExploder : MonoBehaviour {
+
+    public GameObject audioSourceForCystals;
+
     bool isFirst = true;
     void Start()
     {
@@ -16,6 +19,14 @@ public class CrystalExploder : MonoBehaviour {
     public void DestroyVentSelf()
     {
         ExploderSingleton.Instance.ExplodeCracked(gameObject);
+        print("I am checking for sounds");
+        if (audioSourceForCystals) {
+            Instantiate(audioSourceForCystals, gameObject.transform.position, gameObject.transform.rotation);
+        }
+        //if (gameObject.GetComponent<AudioSource>()) {
+        //    print("It has sound");
+        //    gameObject.GetComponent<AudioSource>().Play();
+        //}
     }
 
     private void Update()

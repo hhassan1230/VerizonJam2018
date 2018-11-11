@@ -16,6 +16,7 @@ public class MushroomCapController : MonoBehaviour {
     public void ActivateSpore() {
         if (!IsSporing) {
             Spore.SetActive(true);
+            GetComponent<AudioSource>().Play();
             IsSporing = true;
         }
     }
