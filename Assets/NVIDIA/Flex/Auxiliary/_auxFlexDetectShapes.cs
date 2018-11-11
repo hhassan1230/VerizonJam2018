@@ -110,20 +110,25 @@ namespace NVIDIA.Flex
                     Collider collider = item.Key;
                     ShapeData shapeData = item.Value;
 
-                    if (!(collider is SphereCollider) && !(collider is CapsuleCollider) && !(collider is BoxCollider) && !(collider is MeshCollider))
-                        continue;
+                    if (collider != null)
+                    {
+                        if (!(collider is SphereCollider) && !(collider is CapsuleCollider) && !(collider is BoxCollider) && !(collider is MeshCollider))
+                            continue;
 
-                    m_geometryBuffer.Set(shapeIndex, shapeData.geometry);
-                    m_shapeFlagsBuffer.Set(shapeIndex, shapeData.flags);
-                    m_shapePositionBuffer.Set(shapeIndex, (Vector4)(collider.transform.position + collider.transform.rotation * shapeData.shapeCenter));
-                    m_shapeRotationBuffer.Set(shapeIndex, collider.transform.rotation * shapeData.shapePreRotation);
-                    m_shapePrevPositionBuffer.Set(shapeIndex, (Vector4)shapeData.shapePrevPosition);
-                    m_shapePrevRotationBuffer.Set(shapeIndex, shapeData.shapePrevRotation);
+                        m_geometryBuffer.Set(shapeIndex, shapeData.geometry);
+                        m_shapeFlagsBuffer.Set(shapeIndex, shapeData.flags);
+                        m_shapePositionBuffer.Set(shapeIndex, (Vector4)(collider.transform.position + collider.transform.rotation * shapeData.shapeCenter));
+                        m_shapeRotationBuffer.Set(shapeIndex, collider.transform.rotation * shapeData.shapePreRotation);
+                        m_shapePrevPositionBuffer.Set(shapeIndex, (Vector4)shapeData.shapePrevPosition);
+                        m_shapePrevRotationBuffer.Set(shapeIndex, shapeData.shapePrevRotation);
 
-                    shapeData.shapePrevPosition = collider.transform.position + collider.transform.rotation * shapeData.shapeCenter;
-                    shapeData.shapePrevRotation = collider.transform.rotation * shapeData.shapePreRotation;
+                        shapeData.shapePrevPosition = collider.transform.position + collider.transform.rotation * shapeData.shapeCenter;
+                        shapeData.shapePrevRotation = collider.transform.rotation * shapeData.shapePreRotation;
 
-                    ++shapeIndex;
+                        ++shapeIndex;
+                    }
+
+                   
                 }
 
                 Flex.SetShapes(m_scene.container.solver, m_geometryBuffer.handle,

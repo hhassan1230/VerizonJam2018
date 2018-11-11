@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: ContainerBigScale
   m_EditorClassIdentifier: 
   m_simpleMode: 1
-  m_simpleMaxParticles: 100000
+  m_simpleMaxParticles: 10000
   m_simpleSubstepCount: 2
   m_simpleIterationCount: 5
   m_simpleGravity: {x: 0, y: 0, z: 0}
@@ -21,7 +21,7 @@ MonoBehaviour:
   m_simpleParticleRestitution: 0
   m_simpleParticleAdhesion: 0
   m_simpleParticleDamping: 0
-  m_simpleClothWind: {x: 0, y: 0, z: 0}
+  m_simpleClothWind: {x: 0.18, y: 0, z: 0}
   m_simpleClothDrag: 0
   m_simpleClothLift: 0
   m_simpleFluidCohesion: 0.025
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_maxDiffuse: 0
   m_maxNeighbors: 200
   m_maxContacts: 6
-  m_recreateSolver: 0
+  m_recreateSolver: 1
   m_substepCount: 2
   m_iterationCount: 5
   m_gravity: {x: 0, y: 0, z: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_shockPropagation: 0
   m_dissipation: 0
   m_damping: 0
-  m_wind: {x: 0, y: 0, z: 0}
+  m_wind: {x: 0.18, y: 0, z: 0}
   m_drag: 0
   m_lift: 0
   m_fluid: 1
