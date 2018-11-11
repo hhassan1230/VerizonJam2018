@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: CrystalScaleRange
   m_EditorClassIdentifier: 
   value: 0
-  min: 0.2
-  max: 0.7
+  min: 0.5
+  max: 1
