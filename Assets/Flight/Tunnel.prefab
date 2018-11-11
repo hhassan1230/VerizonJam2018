@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 4183722937815010}
   - component: {fileID: 114001689549610468}
   - component: {fileID: 114539330998577938}
+  - component: {fileID: 114350411434143388}
   m_Layer: 0
   m_Name: Tunnel
   m_TagString: Untagged
@@ -1388,6 +1389,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda356c2ee263154ba7fa25f5fe44c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114350411434143388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364061473590622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556d335a113fa8d4985755d34e66a10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decorations:
+  - {fileID: 1877934784083118, guid: 5ba9d53a350cd4342a59417f5bd2af85, type: 2}
+  - {fileID: 1628608184810030, guid: 7d015e2b5ac004c4a80739a467721c4e, type: 2}
+  - {fileID: 1319189172232538, guid: bf2710555c397d7458134a3e84a3968c, type: 2}
+  - {fileID: 1920982977321870, guid: d8ba099a953b45a4bb80202c39e4a570, type: 2}
+  - {fileID: 1143097599789140, guid: b27f9339c671b3944af145d9b6fce073, type: 2}
+  decorationCount: 10
+  floor: {fileID: 1057082659445034}
 --- !u!114 &114382203957039016
 MonoBehaviour:
   m_ObjectHideFlags: 1
