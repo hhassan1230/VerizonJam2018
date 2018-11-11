@@ -11,12 +11,12 @@ public class ShipController : MonoBehaviour {
      float zAxis = 0;
 
     public float xRange = 3f;
-    public float yRange = 2f;
+    public float yRangeUp = 2f;
+    public float yRangeDown = -2f;
 
-   
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
     private void OnDrawGizmos()
@@ -68,14 +68,14 @@ public class ShipController : MonoBehaviour {
             xAxis = -xRange / 2;
         }
 
-        if (yAxis > yRange / 2)
+        if (yAxis > yRangeUp )
         {
-            yAxis = yRange / 2;
+            yAxis = yRangeUp;
         }
 
-        if (yAxis < -yRange / 2)
+        if (yAxis < yRangeDown)
         {
-            yAxis = -yRange / 2;
+            yAxis = yRangeDown;
         }
 
         zAxis += speed * Time.deltaTime;
