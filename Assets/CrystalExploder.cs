@@ -4,10 +4,11 @@ using UnityEngine;
 using Exploder.Utils;
 
 public class CrystalExploder : MonoBehaviour {
-
+    bool isFirst = true;
     void Start()
     {
-        ExploderSingleton.Instance.CrackObject(gameObject);
+
+        
         //Invoke("DestroyVentSelf", 2f);
 
     }
@@ -15,6 +16,15 @@ public class CrystalExploder : MonoBehaviour {
     public void DestroyVentSelf()
     {
         ExploderSingleton.Instance.ExplodeCracked(gameObject);
+    }
+
+    private void Update()
+    {
+        if (isFirst)
+        {
+            ExploderSingleton.Instance.CrackObject(gameObject);
+            isFirst = false;
+        }
     }
 
 }

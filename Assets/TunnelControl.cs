@@ -15,13 +15,15 @@ public class TunnelControl : MonoBehaviour {
     public int mushroomCount = 5;
     public GameObject floor;
 
-    [Header("Crystals")]
-    public GameObject[] crystalPrefabs;
+    public GetRandomPointInTunnel pointOnPlane;
+    public GetRandomPointInTunnel pointInBox; // todo
 
     // Use this for initialization
     void Start()
     {
-        for(int i = 0; i < mushroomCount; i++)
+        pointOnPlane.reference = floor;
+
+        for (int i = 0; i < mushroomCount; i++)
         {
             CreateMushroom();
         }
@@ -29,6 +31,7 @@ public class TunnelControl : MonoBehaviour {
 
     private void CreateMushroom()
     {
+        
         Bounds b = new Bounds(floor.transform.position, Vector3.zero);
         b.Encapsulate(floor.GetComponent<Renderer>().bounds);
         float x = Random.Range(b.center.x - b.size.x / 2, b.center.x + b.size.x / 2);

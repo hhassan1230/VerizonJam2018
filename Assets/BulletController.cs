@@ -19,7 +19,8 @@ public class BulletController : MonoBehaviour
     private IEnumerator KillSelf() {
         yield return new WaitForSeconds(5f);
 
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     void FixedUpdate()
@@ -45,13 +46,15 @@ public class BulletController : MonoBehaviour
         }
         else if (other.gameObject.tag == "Exploder")
         {
-            if (other.gameObject.name == "Crystal")
-                print("Crystal bam bam!!");
+            //if (other.gameObject.name == "Crystal")
+            print("Crystal bam bam!!");
 
             other.gameObject.GetComponent<CrystalExploder>().DestroyVentSelf();
+            // }
+            Instantiate(impact, gameObject.transform.position, gameObject.transform.rotation); // Quaternion.identity
+                                                                                               // gameObject.SetActive(false);
+            Destroy(gameObject);
         }
-        Instantiate(impact, gameObject.transform.position, gameObject.transform.rotation); // Quaternion.identity
-        gameObject.SetActive(false);
     }
 
 }

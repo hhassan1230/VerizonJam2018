@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1113,6 +1113,10 @@ Prefab:
     - target: {fileID: 1024540891637068, guid: e418836b3fa0448609c361b22d56498a, type: 2}
       propertyPath: m_TagString
       value: Exploder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646912427912944, guid: e418836b3fa0448609c361b22d56498a, type: 2}
+      propertyPath: m_Name
+      value: Crystal
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64213975940190722, guid: e418836b3fa0448609c361b22d56498a, type: 2}

@@ -110,6 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4183722937815010}
   - component: {fileID: 114001689549610468}
+  - component: {fileID: 114539330998577938}
   m_Layer: 0
   m_Name: Tunnel
   m_TagString: Untagged
@@ -130,7 +131,7 @@ GameObject:
   - component: {fileID: 64751985802349660}
   - component: {fileID: 114524018712861516}
   m_Layer: 0
-  m_Name: AddTrigger
+  m_Name: SpawnTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,10 +648,10 @@ MonoBehaviour:
   spawnPoint: {fileID: 1804843317104516}
   mushroomPrefabs:
   - {fileID: 1917364431668660, guid: af18a64f5ba8b164d9a661066cbfeb33, type: 2}
-  - {fileID: 1097612640969686, guid: 2402e43a2f720ff4d92867fc99af4709, type: 2}
-  mushroomCount: 5
+  mushroomCount: 3
   floor: {fileID: 1057082659445034}
-  crystalPrefabs: []
+  pointOnPlane: {fileID: 11400000, guid: 7c6c9f68fe9e34d4cad5499bf6183445, type: 2}
+  pointInBox: {fileID: 0}
 --- !u!114 &114202113412265774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16157,6 +16158,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda356c2ee263154ba7fa25f5fe44c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114539330998577938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364061473590622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a908663e6c6dc524b9f91eb2067a936e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystalPrefabs:
+  - {fileID: 100000, guid: b9301fb70cfb04f4a975cd40f4aabe1b, type: 2}
+  - {fileID: 100000, guid: f554a5af2697069459ba5637ab044775, type: 2}
+  - {fileID: 100000, guid: b61cd9da4779a584794945ed61287742, type: 2}
+  - {fileID: 100000, guid: cbb17acb15a73984299aa3c4ed420777, type: 2}
+  - {fileID: 100000, guid: 31d4fe317e29f3c4197387c44280fd70, type: 2}
+  - {fileID: 100000, guid: 8fa7bf55eb9f97240bc6ebcb1d5e533a, type: 2}
+  - {fileID: 100000, guid: e1a535fb9f9c6554f837f96dea6612c6, type: 2}
+  - {fileID: 100000, guid: 8fa7bf55eb9f97240bc6ebcb1d5e533a, type: 2}
+  - {fileID: 100000, guid: 255d4643632c0864191592a05837e814, type: 2}
+  - {fileID: 100000, guid: e76d5b3811915b743b14bb50aa6dd525, type: 2}
+  point: {fileID: 11400000, guid: 7c6c9f68fe9e34d4cad5499bf6183445, type: 2}
+  count: 5
+  heightMax: 0.4
+  scaleRange: {fileID: 11400000, guid: f238c628baadc8a45a040c4de31a838c, type: 2}
 --- !u!137 &137626984795137060
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
