@@ -10,6 +10,7 @@ TagManager:
   - Crystal
   - MushroomCap
   - Spore
+  - CrystalParent
   layers:
   - Default
   - TransparentFX
