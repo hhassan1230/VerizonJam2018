@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 644a615ad2f550740ba6ad64c66bbe3e, type: 2}
   m_HaloStrength: 0.433
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4172722, g: 0.5795929, b: 0.35046542, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -305,7 +305,7 @@ Camera:
   m_GameObject: {fileID: 697681819}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -850,6 +850,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4817645618040820, guid: 04ba30cf29e954d47bc5709c54a30975,
     type: 2}
   m_PrefabInternal: {fileID: 1963719586}
+--- !u!1001 &2077386527
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183722937815010, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364061473590622, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+      propertyPath: m_Name
+      value: Tunnel (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5a696a5fe47492a46b5c71de4c203695, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &2114262191
 GameObject:
   m_ObjectHideFlags: 0
