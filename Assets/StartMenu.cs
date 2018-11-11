@@ -7,6 +7,8 @@ public class StartMenu : MonoBehaviour {
     public GameObject loadingWrap;
     public GameObject universe;
     public GameObject title;
+    public AudioSource warpSound;
+
 	// Use this for initialization
 	void Start () {
         loadingWrap.SetActive(false);
@@ -29,6 +31,8 @@ public class StartMenu : MonoBehaviour {
 
     public void StartGame() {
         loadingWrap.SetActive(true);
+        // Play Sound
+        warpSound.Play();
         StartCoroutine("KillUniverse");
         title.SetActive(false);
         
@@ -36,7 +40,7 @@ public class StartMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Fire1"))
         {
             StartGame();
         }
