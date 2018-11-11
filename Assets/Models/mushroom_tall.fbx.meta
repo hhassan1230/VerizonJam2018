@@ -1,14 +1,26 @@
 fileFormatVersion: 2
-guid: db5fd3cff4b1bab4d87ff2cc09df47d2
+guid: e725657d32fe43d4aa8721991a3f00fe
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: cap
+    100002: //RootNode
+    100004: mushroom_tall
+    100006: mushroom_v5
+    100008: stem
+    100010: transform1
+    100012: transform2
+    400000: cap
+    400002: //RootNode
+    400004: mushroom_tall
+    400006: mushroom_v5
+    400008: stem
+    400010: transform1
+    400012: transform2
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: mushroom_v6_stem
+    2300000: mushroom_tall
+    3300000: mushroom_tall
+    4300000: mushroom_tall
   externalObjects: {}
   materials:
     importMaterials: 1

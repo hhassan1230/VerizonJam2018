@@ -1,14 +1,41 @@
 fileFormatVersion: 2
-guid: db5fd3cff4b1bab4d87ff2cc09df47d2
+guid: 1b593291aa7053e40ac751eeb306573b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: pPlane1
+    100002: pPlane2
+    100004: pPlane3
+    100006: pPlane4
+    100008: pPlane5
+    100010: pPlane6
+    100012: //RootNode
+    400000: pPlane1
+    400002: pPlane2
+    400004: pPlane3
+    400006: pPlane4
+    400008: pPlane5
+    400010: pPlane6
+    400012: //RootNode
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: mushroom_v6_stem
+    2300000: pPlane1
+    2300002: pPlane2
+    2300004: pPlane3
+    2300006: pPlane4
+    2300008: pPlane5
+    2300010: pPlane6
+    3300000: pPlane1
+    3300002: pPlane2
+    3300004: pPlane3
+    3300006: pPlane4
+    3300008: pPlane5
+    3300010: pPlane6
+    4300000: pPlane5
+    4300002: pPlane4
+    4300004: pPlane3
+    4300006: pPlane2
+    4300008: pPlane6
+    4300010: pPlane1
   externalObjects: {}
   materials:
     importMaterials: 1

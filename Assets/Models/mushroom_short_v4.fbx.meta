@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db5fd3cff4b1bab4d87ff2cc09df47d2
+guid: 2916c73f0ef205f49aed769c1159bce1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,8 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: mushroom_v6_stem
+    4300000: mushroom_short_v4
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -65,7 +66,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0

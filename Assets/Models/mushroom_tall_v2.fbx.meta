@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db5fd3cff4b1bab4d87ff2cc09df47d2
+guid: 27e1d170354b5f54bb2133c523c31f16
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: mushroom_v6_stem
+    4300000: mushroom_tall_v2
   externalObjects: {}
   materials:
     importMaterials: 1
