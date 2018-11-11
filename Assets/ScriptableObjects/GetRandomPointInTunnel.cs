@@ -18,6 +18,8 @@ public class GetRandomPointInTunnel : ScriptableObject {
             return new Vector3(x, y, z);
         }
         Debug.Log("Point in tunnel not found");
+
+
         return Vector3.zero;
         
     }

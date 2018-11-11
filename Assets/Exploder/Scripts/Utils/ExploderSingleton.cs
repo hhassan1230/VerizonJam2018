@@ -24,6 +24,7 @@ namespace Exploder.Utils
         void Awake()
         {
             Instance = gameObject.GetComponent<ExploderObject>();
+            
 
 #pragma warning disable 618
             ExploderInstance = Instance;

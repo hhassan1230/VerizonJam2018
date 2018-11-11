@@ -48,8 +48,10 @@ public class BulletController : MonoBehaviour
         {
             //if (other.gameObject.name == "Crystal")
             print("Crystal bam bam!!");
-
+            
             other.gameObject.GetComponent<CrystalExploder>().DestroyVentSelf();
+
+            //other.gameObject.GetComponent<Collider>().enabled = false;
             // }
             Instantiate(impact, gameObject.transform.position, gameObject.transform.rotation); // Quaternion.identity
                                                                                                // gameObject.SetActive(false);

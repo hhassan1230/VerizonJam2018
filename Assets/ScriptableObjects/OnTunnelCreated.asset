@@ -8,9 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32a9e58f0c1826d489031c79de7e3628, type: 3}
-  m_Name: CrystalScaleRange
+  m_Script: {fileID: 11500000, guid: 8c77107d6b7bd6b46ab14137a5a7f210, type: 3}
+  m_Name: OnTunnelCreated
   m_EditorClassIdentifier: 
-  value: 0
-  min: 0.5
-  max: 1
+  isDebug: 0

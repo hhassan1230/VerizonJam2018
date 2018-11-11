@@ -648,7 +648,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1804843317104516}
   mushroomPrefabs:
   - {fileID: 1917364431668660, guid: af18a64f5ba8b164d9a661066cbfeb33, type: 2}
-  mushroomCount: 3
+  mushroomCount: 1
   floor: {fileID: 1057082659445034}
   pointOnPlane: {fileID: 11400000, guid: 7c6c9f68fe9e34d4cad5499bf6183445, type: 2}
   pointInBox: {fileID: 0}
@@ -16184,6 +16184,7 @@ MonoBehaviour:
   count: 5
   heightMax: 0.4
   scaleRange: {fileID: 11400000, guid: f238c628baadc8a45a040c4de31a838c, type: 2}
+  onTunnelSpawn: {fileID: 11400000, guid: 9ab098c272540f841ae92a6c0a91e060, type: 2}
 --- !u!137 &137626984795137060
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
