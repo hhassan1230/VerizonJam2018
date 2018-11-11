@@ -21,10 +21,9 @@ GameObject:
   - component: {fileID: 4105118333251768}
   - component: {fileID: 33791840757589524}
   - component: {fileID: 23307423770333968}
-  - component: {fileID: 65464657532145014}
   m_Layer: 0
   m_Name: GroundCrystal1
-  m_TagString: Untagged
+  m_TagString: Exploder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,10 +40,10 @@ GameObject:
   - component: {fileID: 23334868028189300}
   - component: {fileID: 95346112628734394}
   - component: {fileID: 135236623523701076}
-  - component: {fileID: 64213975940190722}
+  - component: {fileID: 114073560020212078}
   m_Layer: 0
   m_Name: Crystal05-Green
-  m_TagString: Untagged
+  m_TagString: Exploder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024540891637068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.11, y: 0, z: 0}
+  m_LocalPosition: {x: -13.267208, y: -1.2178364, z: 19.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4254077029517088}
@@ -82,7 +81,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024540891637068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -160,32 +159,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646912427912944}
   m_Mesh: {fileID: 4300000, guid: 59de0db916ba38f44b6d45c1bccc3cf2, type: 3}
---- !u!64 &64213975940190722
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646912427912944}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 59de0db916ba38f44b6d45c1bccc3cf2, type: 3}
---- !u!65 &65464657532145014
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1024540891637068}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95346112628734394
 Animator:
   serializedVersion: 3
@@ -204,6 +177,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114073560020212078
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646912427912944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 366a2b36588db40b9ab61d82c103789d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135236623523701076
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -211,7 +195,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646912427912944}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.8418765
