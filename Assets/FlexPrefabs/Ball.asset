@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c124e7227a7437c43b89f4cbd031e9cb, type: 3}
-  m_Name: New FlexClothAsset
+  m_Name: Ball
   m_EditorClassIdentifier: 
   m_particles:
   - {x: -0.00000067055225, y: 9.822542e-13, z: -1.5, w: 1}

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f2b44126ff4eb34e941cfec7bfae3a0, type: 3}
-  m_Name: New FlexContainer
+  m_Name: ContainerSmallScale
   m_EditorClassIdentifier: 
   m_simpleMode: 1
   m_simpleMaxParticles: 100000
