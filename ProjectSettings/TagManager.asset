@@ -8,6 +8,8 @@ TagManager:
   - UseObject
   - Mushroom
   - Crystal
+  - MushroomCap
+  - Spore
   layers:
   - Default
   - TransparentFX
