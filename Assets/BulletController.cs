@@ -44,7 +44,7 @@ public class BulletController : MonoBehaviour
             print("MushStem bam!!");
 
         }
-        else if (other.gameObject.tag == "Exploder")
+        else if (other.gameObject.tag == "CrystalObject")
         {
             //if (other.gameObject.name == "Crystal")
             print("Crystal bam bam!!");

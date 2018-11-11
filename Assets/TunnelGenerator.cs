@@ -13,6 +13,7 @@ public class TunnelGenerator : MonoBehaviour {
     public float angleRange;
 
     bool isDestroy = false;
+    public GameEvent callTunnelCreated;
 	// Use this for initialization
 	void Start () {
         for(int i = 0; i < tunnelsCount; i++)
@@ -64,6 +65,7 @@ public class TunnelGenerator : MonoBehaviour {
         tunels.Add(obj);
         //spawnTrigger.onTriggerEnter += OnTunnelSpawn;
         //destroyTrigger.onTriggerEnter += OnTunnelDestroy;
+        callTunnelCreated.Invoke();
     }
 
     public void DestroyTunnel()

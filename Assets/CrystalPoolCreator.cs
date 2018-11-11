@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class CrystalPoolCreator : MonoBehaviour {
     //public GameObject[] CrystalPool;
@@ -39,11 +39,16 @@ public class CrystalPoolCreator : MonoBehaviour {
 
     private void SpawnCrystal() 
     {
-        int spawnedNumber = UnityEngine.Random.Range(5, 10);
-        for (int i = 0; i < spawnedNumber; i++)
-            { 
+        if (Poolindex < PoolSize)
+        {
+
+            int spawnedNumber = UnityEngine.Random.Range(1, 7);
+            for (int i = 0; i < spawnedNumber; i++)
+            {
                 Vector3 p = point.getPoint();
                 p.y = UnityEngine.Random.Range(p.y + 0.2f, heightMax);
+
+                print(p);
 
                 GameObject CurrentSpawnCrystal = CrystalPool[Poolindex];
                 CurrentSpawnCrystal.transform.position = p;
@@ -51,6 +56,10 @@ public class CrystalPoolCreator : MonoBehaviour {
 
                 Poolindex++;
             }
+        }
+        else {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public void PoolRandomCrystal()

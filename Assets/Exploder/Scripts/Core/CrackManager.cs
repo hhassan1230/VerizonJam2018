@@ -16,6 +16,7 @@ namespace Exploder
         public CrackManager(Core core)
         {
             crackedObjects = new Dictionary<GameObject, CrackedObject>();
+            Debug.Log("CrackManager");
            // this.core = core;
         }
 
@@ -25,7 +26,7 @@ namespace Exploder
 
             var crackedObject = new CrackedObject(originalObject, parameters);
             crackedObjects[originalObject] = crackedObject;
-
+            Debug.Log("Create " + originalObject.name);
             return crackedObject;
         }
 

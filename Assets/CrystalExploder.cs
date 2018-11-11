@@ -10,15 +10,17 @@ public class CrystalExploder : MonoBehaviour {
     bool isFirst = true;
     void Start()
     {
+        //ExploderSingleton.Instance.CrackObject(gameObject);
 
-        
         //Invoke("DestroyVentSelf", 2f);
 
     }
 
     public void DestroyVentSelf()
     {
-        ExploderSingleton.Instance.ExplodeCracked(gameObject);
+        ExploderSingleton.Instance.ExplodeObject(gameObject);
+
+        // ExploderSingleton.Instance.ExplodeCracked(gameObject);
         print("I am checking for sounds");
         if (audioSourceForCystals) {
             Instantiate(audioSourceForCystals, gameObject.transform.position, gameObject.transform.rotation);
@@ -31,11 +33,11 @@ public class CrystalExploder : MonoBehaviour {
 
     private void Update()
     {
-        if (isFirst)
-        {
-            ExploderSingleton.Instance.CrackObject(gameObject);
-            isFirst = false;
-        }
+        //if (isFirst)
+        //{
+        //    ExploderSingleton.Instance.CrackObject(gameObject);
+        //    isFirst = false;
+        //}
     }
 
 }
