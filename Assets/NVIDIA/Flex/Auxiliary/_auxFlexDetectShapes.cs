@@ -110,6 +110,7 @@ namespace NVIDIA.Flex
                     Collider collider = item.Key;
                     ShapeData shapeData = item.Value;
 
+                    // Gordey modify
                     if (collider != null)
                     {
                         if (!(collider is SphereCollider) && !(collider is CapsuleCollider) && !(collider is BoxCollider) && !(collider is MeshCollider))
