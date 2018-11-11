@@ -150,14 +150,14 @@ public class Controller : MonoBehaviour
         /// </summary>
         private void CheckActionInput()
         {
-            // Input
-            float dodgeAxis = Input.GetAxis("Dodge");
+            //// Input
+            //float dodgeAxis = Input.GetAxis("Dodge");
 
-            // Dodge
-            if (dodgeAxis != 0)
-            {
-                m_Character.Dodge(dodgeAxis);
-            }
+            //// Dodge
+            //if (dodgeAxis != 0)
+            //{
+            //    m_Character.Dodge(dodgeAxis);
+            //}
 
             // Boost effect
             if (Input.GetButtonDown("Fire1"))

@@ -219,18 +219,19 @@ public class Character : MonoBehaviour
         /// <param name="_AdditiveRoll">Roll value to add</param>
         public void AddRoll(float _AdditiveRoll, bool _Dodge = false)
         {
-            // Check roll limit
-            /*
-            if (m_RollLimit > 0)
-            {
-                if (!CheckRollLimit(_AdditiveRoll))
-                {
-                    return;
-                }
-            }*/
+        // Check roll limit
 
-            // Time based rotation
-            if (!_Dodge)
+        if (m_RollLimit > 0)
+        {
+            if (!CheckRollLimit(_AdditiveRoll))
+            {
+                print("limit");
+                return;
+            }
+        }
+
+        // Time based rotation
+        if (!_Dodge)
             {
                 _AdditiveRoll *= Time.deltaTime * m_RotationSpeed;
             }
@@ -250,18 +251,18 @@ public class Character : MonoBehaviour
         /// <param name="_AdditivePitch">Pitch value to add</param>
         public void AddPitch(float _AdditivePitch)
         {
-            // Check pitch limit
-            /*
-            if (m_PitchLimit > 0)
-            {
-                if (!CheckPitchLimit(_AdditivePitch))
-                {
-                    return;
-                }
-            }*/
+        // Check pitch limit
 
-            // Time based rotation
-            _AdditivePitch *= Time.deltaTime * m_RotationSpeed;
+        if (m_PitchLimit > 0)
+        {
+            if (!CheckPitchLimit(_AdditivePitch))
+            {
+                return;
+            }
+        }
+
+        // Time based rotation
+        _AdditivePitch *= Time.deltaTime * m_RotationSpeed;
 
             // Add rotation
             Quaternion rotator = Quaternion.AngleAxis(_AdditivePitch, transform.right);

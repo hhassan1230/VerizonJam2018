@@ -45,8 +45,10 @@ public class GridGenerator : MonoBehaviour
                     {
                         for (int k = 0; k < m_GridSize.z; k++)
                         {
-                            GameObject obj = GameObject.Instantiate(m_PrefabToSpawn, transform.position + new Vector3(i * m_SpaceBetweenObjects, j * m_SpaceBetweenObjects, k * m_SpaceBetweenObjects), Quaternion.identity) as GameObject;
+                        Quaternion rot = Quaternion.Euler(new Vector3(Random.Range(-180, 180), Random.Range(-180, 180), Random.Range(-180, 180))); 
+                        GameObject obj = GameObject.Instantiate(m_PrefabToSpawn, transform.position + new Vector3(i * m_SpaceBetweenObjects, j * m_SpaceBetweenObjects, k * m_SpaceBetweenObjects), rot) as GameObject;
                             obj.transform.parent = transform.parent;
+
                         }
                     }
                 }
