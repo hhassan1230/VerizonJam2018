@@ -60,12 +60,17 @@ public class TunnelGenerator : MonoBehaviour {
 
             t.spawnTrigger.onTriggerEnter += OnTunnelSpawn;
             t.removeTrigger.onTriggerEnter += OnTunnelDestroy;
+            
         }
 
         tunels.Add(obj);
+
+       
+            callTunnelCreated.Invoke();
+
         //spawnTrigger.onTriggerEnter += OnTunnelSpawn;
         //destroyTrigger.onTriggerEnter += OnTunnelDestroy;
-        callTunnelCreated.Invoke();
+
     }
 
     public void DestroyTunnel()

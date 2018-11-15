@@ -17,10 +17,10 @@ public class CrystalPoolCreator : MonoBehaviour {
     public List<GameObject> CrystalPool = new List<GameObject>();
 
 
-    public int PoolSize;
-    private int Poolindex;
+    public int PoolSize ;
+    private int Poolindex = 0;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         for (int i = 0; i < PoolSize; i++)
         {
             PoolRandomCrystal();
@@ -48,7 +48,7 @@ public class CrystalPoolCreator : MonoBehaviour {
                 Vector3 p = point.getPoint();
                 p.y = UnityEngine.Random.Range(p.y + 0.2f, heightMax);
 
-                print(p);
+                print(CrystalPool.Count);
 
                 GameObject CurrentSpawnCrystal = CrystalPool[Poolindex];
                 CurrentSpawnCrystal.transform.position = p;
