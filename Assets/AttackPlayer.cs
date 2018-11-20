@@ -20,7 +20,7 @@ public class AttackPlayer : MonoBehaviour {
     private IEnumerator ActivateEnemyShooting()
     {
         
-        yield return new WaitForSeconds(10f); // 20
+        yield return new WaitForSeconds(20f); // 20
         //Soti
         StartCoroutine("ShootingInterval");
     }
@@ -28,7 +28,7 @@ public class AttackPlayer : MonoBehaviour {
     private IEnumerator ShootingInterval()
     {
         FireAtPlayer();
-        yield return new WaitForSeconds(5f); // 10
+        yield return new WaitForSeconds(10f); // 10
         StartCoroutine("ShootingInterval");
     }
 
