@@ -74,7 +74,7 @@ public class EnemyHealth : MonoBehaviour {
 
 
 	public void HurtEnemy() {
-		 health -= 5;
+		 health -= 7;
         StartCoroutine("hurtLightActive");
 		 if (health <= 0) {
 		 	if (!hasDied) {
