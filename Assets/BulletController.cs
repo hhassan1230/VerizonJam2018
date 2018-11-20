@@ -57,6 +57,10 @@ public class BulletController : MonoBehaviour
                                                                                                // gameObject.SetActive(false);
             Destroy(gameObject);
         }
+        else if (other.gameObject.tag == "SwarmWeakPoint") 
+        {
+            other.gameObject.GetComponent<EnemyHealth>().HurtEnemy();
+        }
     }
 
 }

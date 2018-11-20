@@ -20,8 +20,12 @@ public class ShipController : MonoBehaviour {
     private float currentTurningTimeH;
 
     private Vector3 StartRotation;
-    private float EndRotationEuler;
+    private float EndRotationEulerZ;
+    private float EndRotationEulerX;
+
     private Quaternion EndRotation;
+
+    private const float RotEpsilon = 0.01f;
 
     // Use this for initialization
     void Start () {
@@ -50,7 +54,7 @@ float horizontal = Input.GetAxisRaw("Horizontal");
                 rot.z = Mathf.Clamp(rot.z + 2, 0, 45);
             }
             else {
-                if(rot.z == 0)
+                if(Mathf.Abs(rot.z) < RotEpsilon)
                 {
                     rot.z = 360;
                 }
@@ -63,27 +67,45 @@ float horizontal = Input.GetAxisRaw("Horizontal");
             {
                 print("SETTING START ROTATION");
                 StartRotation.z = rot.z;
-                EndRotationEuler = rot.z > 300 ? 360 : 0;
+                EndRotationEulerZ = rot.z > 300 ? 360 : 0;
+
+                if (horizontal == 0 && vertical == 0)
+                {
+                    if (rot.z < RotEpsilon && rot.x > 300)
+                    {
+                        print("000000: " + rot.z + " -- " + rot.x);
+                        EndRotationEulerZ = 0;
+                    }
+                    if (rot.z < 50 && rot.x > 300)
+                    {
+                        print("11111: " + rot.z + " -- " + rot.x);
+                        EndRotationEulerZ = 0;
+                    }
+                    //else if (rot.z > 300 && rot.x < 50)
+                    //{
+                    //    print("555555: " + rot.z + " -- " + rot.x);
+                    //    //EndRotationEuler = 360;
+                    //}
+
+                    else if (rot.z > 300 && rot.x > RotEpsilon)
+                    {
+                        print("33333: " + rot.z + " -- " + rot.x);
+                        EndRotationEulerZ = 360;
+                    }
+                    else if (rot.z > 300)
+                    {
+                        print("22222: " + rot.z + " -- " + rot.x);
+                        EndRotationEulerZ = 360;
+
+                    }
+                }
             }
 
             currentTurningTimeH += Time.deltaTime * turningRotationSpeed;
 
-
-            if (horizontal == 0 && vertical == 0)
-            {
-                if (rot.z < 50 && rot.x > 300)
-                {
-                    EndRotationEuler = 360;
-                }
-                else if(rot.z > 300 && rot.x < 50)
-                {
-                    EndRotationEuler = 0;
-                }
-            }
-
-            print("1- Z: " + StartRotation.z + " -- curZ: " + rot.z + " -- T: " + currentTurningTimeH);
-            rot.z = Mathf.Lerp(StartRotation.z, EndRotationEuler, currentTurningTimeH);
-            print("2- Z: " + StartRotation.z + " -- curZ: " + rot.z + " -- T: " + currentTurningTimeH);
+            //print("1- Z: " + StartRotation.z + " -- curZ: " + rot.z + " -- T: " + currentTurningTimeH);
+            rot.z = Mathf.Lerp(StartRotation.z, EndRotationEulerZ, currentTurningTimeH);
+            //print("2- Z: " + StartRotation.z + " -- curZ: " + rot.z + " EndRotationEuler: " + EndRotationEulerZ +" -- T: " + currentTurningTimeH);
 
         }
 
@@ -97,7 +119,7 @@ float horizontal = Input.GetAxisRaw("Horizontal");
                 rot.x = Mathf.Clamp(rot.x + 2, 0, 30);
             }
             else {
-                if(rot.x == 0)
+                if(Mathf.Abs(rot.x) < RotEpsilon)
                 {
                     rot.x = 360;
                 }
@@ -109,12 +131,19 @@ float horizontal = Input.GetAxisRaw("Horizontal");
             if (currentTurningTimeV == 0)
             {
                 StartRotation.x = rot.x;
-                EndRotationEuler = rot.x > 300 ? 360 : 0;
+                EndRotationEulerX = rot.x > 300 ? 360 : 0;
+
+                //if (rot.z > 300 && rot.x < 50)
+                //{
+                //    print("44444: " + rot.z + " -- " + rot.x);
+                //    EndRotationEuler = 0;
+                //}
+
             }
 
             currentTurningTimeV += Time.deltaTime * turningRotationSpeed;
 
-            rot.x = Mathf.Lerp(StartRotation.x, EndRotationEuler, currentTurningTimeV);
+            rot.x = Mathf.Lerp(StartRotation.x, EndRotationEulerX, currentTurningTimeV);
         }
 
         //if (xAxis < 0)

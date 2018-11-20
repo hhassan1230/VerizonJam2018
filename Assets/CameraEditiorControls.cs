@@ -12,8 +12,8 @@ public class CameraEditiorControls : MonoBehaviour {
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Mouse X") * speed;
-        float vertical = Input.GetAxis("Mouse Y") * speed;
+        float horizontal = Input.GetAxisRaw("Horizontal") * speed;
+        float vertical = Input.GetAxisRaw("Vertical") * speed;
 
         transform.Rotate(0f, horizontal, 0f, Space.World);
         transform.Rotate(-vertical, 0f, 0f, Space.Self);
