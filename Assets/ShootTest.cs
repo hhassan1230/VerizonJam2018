@@ -12,6 +12,7 @@ public class ShootTest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //print(Input.GetAxisRaw("Fire1"));
         if(Input.GetButton("Fire1")) {
             Instantiate(bullet, transform.position, transform.rotation);
 
