@@ -13,6 +13,9 @@ public class ProtonPack : MonoBehaviour {
 	public ParticleSystem protonBeamParticles;
 	int protonBeamFlag = 0;
 
+    private bool firing;
+
+    public GameObject tipOfGun;
 
 	void  Start (){
 
@@ -40,6 +43,20 @@ public class ProtonPack : MonoBehaviour {
 			ProtonPackStop();
 
 		}
+        if (firing)
+        {
+            Vector3 origin = tipOfGun.transform.position;
+            Vector3 direction = -tipOfGun.transform.forward;
+            RaycastHit ObjectOut;
+            Debug.DrawLine(origin, origin + direction * 10);
+            if (Physics.Raycast(origin, direction, out ObjectOut, 10f)) {
+                print(ObjectOut.transform.gameObject.name);
+                if (ObjectOut.transform.gameObject.tag == "LandEnemy"){
+                    ObjectOut.transform.gameObject.GetComponent<FloorEnemyHealth>().ApplyingDamage();
+                }
+            }
+
+        }
 
 	}
 
@@ -57,7 +74,7 @@ public class ProtonPack : MonoBehaviour {
 		if (protonBeamFlag == 0)
 		{
 			ProtonMainFX.SetActive(true);
-
+            firing = true;
 			lightningBoltParticles.Play();
 			protonBeamParticles.Play();
 
@@ -75,6 +92,7 @@ public class ProtonPack : MonoBehaviour {
 		ProtonMainFX.SetActive(false);
 		lightningBoltParticles.Stop();
 		protonBeamParticles.Stop();
+        firing = false;
 
 		beamMainAudio.Stop();
 		beamStartAudio.Stop();
